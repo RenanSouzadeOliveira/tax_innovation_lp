@@ -807,12 +807,28 @@ p {
     }
     .footer-col ul li {
        justify-content: center; /* Centraliza ícone e texto */
-       text-align: left; /* Mantém texto alinhado à esquerda */
+       text-align: left; /* Mantém texto alinhado à esquerda dentro do centro */
+       display: inline-flex; /* Faz com que o li ocupe apenas o espaço necessário */
+       width: auto; /* Permite que o li se ajuste ao conteúdo */
+       max-width: 100%; /* Evita que ultrapasse a largura */
        margin-bottom: 12px; /* Menos espaço entre itens */
     }
+
+    /* Ajuste específico para o item de endereço no mobile */
+    .footer-col ul.contact-list li:last-child {
+        display: flex; /* Volta para flex para o ícone alinhar corretamente */
+        justify-content: center;
+        text-align: center; /* Centraliza texto do endereço */
+    }
+     .footer-col ul.contact-list li:last-child span {
+        text-align: center;
+    }
+
+
     .social-links {
         justify-content: center; /* Centraliza ícones sociais */
         margin-top: 15px;
+        display: flex; /* Adicionado para garantir a centralização */
     }
 
     /* Ajuste para o CTA Final */
